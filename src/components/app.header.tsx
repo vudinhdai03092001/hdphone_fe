@@ -13,24 +13,22 @@ function AppHeader() {
     return (
         <>
             {/* Navbar */}
-            <Navbar fixed='top' expand="lg" className=" flex-column p-0 bg-body-tertiary" >
+            <Navbar fixed='top' expand="lg" className=" flex-column p-0 bg-body-tertiary color-orange" >
                 {/* Header Box */}
-
-                <div className="w-100 text-center  header-box ">
-                    <Container className='d-flex justify-content-between'>
-                        <div className="d-flex">
-                            <div className="p-1 border bg-light"><MDBIcon fas icon="envelope" style={{ color: "gray !important" }} /> vudinhdai@gmail.com</div>
-                            <div className="p-1 border bg-light"><MDBIcon fas icon="phone" style={{ color: "gray !important" }} /> 0333 262 051</div>
-                        </div>
-                        <div className="p-1 border bg-light"><MDBIcon fab icon="facebook" style={{ color: "blue !important" }} /> Facebook  </div>
-                    </Container>
+                <div className="w-100">
+                    <img
+                        alt=""
+                        src="/img/banner-header.png"
+                        className="d-inline-block align-top"
+                      
+                    />{' '}
                 </div>
-                <Container>
+                <Container className=''>
                     <Navbar.Brand  >
                         <Link href={'/'} className='navbar-brand'>
                             <img
                                 alt=""
-                                src="https://lamhai.com.vn/img/logo.png"
+                                src="/img/logo-phone.jpg"
                                 width="60"
                                 height="60"
                                 className="d-inline-block align-top"
@@ -39,7 +37,7 @@ function AppHeader() {
                     </Navbar.Brand>
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0"
+                            className="me-auto my-2 my-lg-0 color-text"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
@@ -47,7 +45,6 @@ function AppHeader() {
                             <Link href="/products" className='nav-link'>Sản phẩm</Link>
                             <Link href="/news" className='nav-link'>Tin tức</Link>
                             <Link href="/contact" className='nav-link'>Liên hệ</Link>
-
                             <Form className="d-flex pl-4" style={{ paddingLeft: "100px" }}>
                                 <Form.Control
                                     type="search"
@@ -79,24 +76,21 @@ function AppHeader() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
             {/* Mobile Navbar */}
             <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
-                <div className="w-100 text-center  header-box ">
-                    <Container className='d-flex justify-content-between'>
-                        <div className="d-flex">
-                            <div className="p-1 border bg-light"><MDBIcon fas icon="envelope" />vudinhdai@gmail.com</div>
-                            <div className="p-1 border bg-light"><MDBIcon fas icon="phone" /> 0333 262 051</div>
-                        </div>
-                        <div className="p-1 border bg-light"><MDBIcon fab icon="facebook" /></div>
-                    </Container>
+                <div className="">
+                    <img
+                        alt=""
+                        src="/img/banner-header.png"
+                        className="d-inline-block align-top"
+                    />{' '}
                 </div>
                 <Container>
                     <Navbar.Brand  >
                         <Link href={'/'} className='navbar-brand'>
                             <img
                                 alt=""
-                                src="https://lamhai.com.vn/img/logo.png"
+                                src="/img/logo-phone.jpg"
                                 width="60"
                                 height="60"
                                 className="d-inline-block align-top"

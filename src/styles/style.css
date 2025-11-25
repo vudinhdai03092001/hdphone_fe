@@ -38,6 +38,13 @@ body {
     background-color: aqua;
 
 }
+.color-orange {
+    opacity: 1;
+    background-color: rgb(255 103 34) !important;
+}
+.color-text{
+    color: white !important;
+}
 
 .banner-advertisement {
     width: 155px;
