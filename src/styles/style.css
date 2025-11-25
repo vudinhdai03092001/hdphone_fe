@@ -1,0 +1,235 @@
+body {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.advertisement {
+    width: 100%;
+    height: 200px;
+    /* background-color: aquamarine; */
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price-list {
+    width: 100%;
+    height: 400px;
+    border: 2px solid rgb(219, 219, 219);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.price-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.radio-price {
+    margin-bottom: 10px;
+}
+
+.header-contact {
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+
+}
+
+.banner-advertisement {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.navbar-custom {
+    background-color: #ffffff !important;
+    /* Màu trắng */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hiệu ứng bóng */
+}
+
+.color-footer {
+    background-color: rgb(105, 58, 58) !important;
+}
+
+.color-star {
+    color: rgb(236, 196, 65);
+}
+
+.color-star-gray {
+    color: rgb(189, 189, 189);
+}
+
+.card-hover :hover {
+    opacity: 1px;
+}
+
+.item-image {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.header-box {
+    background-color: #e2e2e2;
+    /* Màu nền */
+    color: #333;
+    /* Màu chữ */
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #dadada;
+    /* Đường kẻ dưới */
+}
+
+.navbar {
+    z-index: 1030;
+}
+
+.detail-product {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.arrow-right {
+    cursor: pointer;
+    z-index: 1;
+    float: right;
+    color: #CCC;
+}
+
+.arrow-left {
+    cursor: pointer;
+    z-index: 1;
+    color: #CCC;
+}
+
+.btn-arrow {
+    position: absolute;
+    top: 50%;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+}
+
+.cart-quantity-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-quantity-container h5 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.mdb-input-group {
+
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.mdb-input-group input {
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #dedede;
+}
+
+.mdb-input-group input:focus {
+    outline: none;
+}
+
+.mdb-input-group button {
+    background-color: #939393;
+    color: #fff;
+    font-weight: bold;
+    width: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.mdb-input-group button:hover {
+    background-color: #a4a4a4;
+}
+
+.btn-decrease:focus {
+    color: #fff !important;
+}
+
+.font-size-item {
+    font-size: 8px;
+}
+
+.table-border {
+    border: 3px solid #d0d0d0 !important;
+}
+
+.img-handle {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgb(220, 130, 78)
+}
+
+.img-table {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.box-list-upload {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.box-list-upload:hover .delete-btn {
+    display: block;
+
+
+}
+
+.delete-btn {
+    position: absolute;
+    top: 50%;
+    /* Căn giữa theo chiều dọc */
+    left: 50%;
+    /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%);
+    /* Điều chỉnh để chính xác ở giữa */
+    background-color: rgba(242, 242, 242, 0.684);
+    color: rgb(235, 44, 44);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+    /* Ẩn nút delete ban đầu */
+}
+
+.list-upload {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
