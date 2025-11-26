@@ -19,62 +19,61 @@ function AppHeader() {
                     <img
                         alt=""
                         src="/img/banner-header.png"
-                        className="d-inline-block align-top"
-                      
+                        className="d-inline-block align-top img-header-banner"
                     />{' '}
                 </div>
                 <Container className=''>
                     <Navbar.Brand  >
-                        <Link href={'/'} className='navbar-brand'>
+                        <Link href={'/'}
+                            style={{ width: "50px", height: "100%" }}
+                        >
                             <img
                                 alt=""
-                                src="/img/logo-phone.jpg"
-                                width="60"
-                                height="60"
+                                src="/img/HD_Logo.png"
+                                style={{ width: "100%", height: "100%", objectFit: "contain" }}
                                 className="d-inline-block align-top"
                             />{' '}
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0 color-text"
+                            className="me-auto my-2 my-lg-0 "
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link href="/" className='nav-link'>Trang chủ</Link>
+                            {/* <Link href="/" className='nav-link color-text'>Trang chủ</Link> */}
                             <Link href="/products" className='nav-link'>Sản phẩm</Link>
                             <Link href="/news" className='nav-link'>Tin tức</Link>
                             <Link href="/contact" className='nav-link'>Liên hệ</Link>
-                            <Form className="d-flex pl-4" style={{ paddingLeft: "100px" }}>
+                            <Form className="d-flex pl-8" >
                                 <Form.Control
                                     type="search"
-                                    placeholder="Search"
+                                    placeholder="Bạn cần tìm?"
                                     className="me-2"
-                                    aria-label="Search"
+                                    aria-label="Search" style={{ width: "500px" }}
                                 />
-                                <Button variant="outline-primary"><MDBIcon fas icon="search" /></Button>
+                                <Button variant="light"><MDBIcon fas icon="search" /></Button>
                             </Form>
                         </Nav>
-
-                        <MDBBtn outline color='secondary' className='me-4'>
+                        <MDBBtn color='light' className='me-4'>
                             <MDBIcon fas icon="cart-plus" />
-                            <MDBBadge className='ms-2' style={{ color: '#285192', fontSize: "12px" }}>
-                                8
-                            </MDBBadge>
                         </MDBBtn>
-                        <NavDropdown title="Admin" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Đăng nhập</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Đăng ký tài khoản
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
-                                Cài đặt
-                            </NavDropdown.Item>
-                        </NavDropdown>
-
                     </Navbar.Collapse>
                 </Container>
+                <div className="w-100" style={{ backgroundColor: "white" }}>
+                    <Container>
+                        <Nav
+                            className="me-auto my-2 my-lg-0 "
+                            style={{ maxHeight: '100px' }}
+                            navbarScroll
+                        >
+                            <Link href="/" className='nav-link '>Trang chủ</Link>
+                            <Link href="/products" className='nav-link'>Sản phẩm</Link>
+                            <Link href="/news" className='nav-link'>Tin tức</Link>
+                            <Link href="/contact" className='nav-link'>Liên hệ</Link>
+                        </Nav>
+                    </Container>
+                </div>
             </Navbar>
             {/* Mobile Navbar */}
             <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
@@ -82,7 +81,7 @@ function AppHeader() {
                     <img
                         alt=""
                         src="/img/banner-header.png"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top img-header-banner"
                     />{' '}
                 </div>
                 <Container>
@@ -90,10 +89,10 @@ function AppHeader() {
                         <Link href={'/'} className='navbar-brand'>
                             <img
                                 alt=""
-                                src="/img/logo-phone.jpg"
                                 width="60"
                                 height="60"
-                                className="d-inline-block align-top"
+                                src="/img/HD_Logo.png"
+                                className="d-inline-block align-top "
                             />{' '}
                         </Link>
                     </Navbar.Brand>

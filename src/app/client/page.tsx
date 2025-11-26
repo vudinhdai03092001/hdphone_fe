@@ -15,11 +15,17 @@ import {
     MDBRow,
     MDBBadge
 } from 'mdb-react-ui-kit';
-
+import {
+    TabletOutlined,
+    MobileOutlined
+} from '@ant-design/icons';
 import { useGetCategoriesActiveQuery } from '@/store/category/category.service';
 import { useEffect, useState } from 'react';
 import AppItemProduct from '@/components/app.product';
 import AppCategory from '@/components/app.category';
+import { faLightbulb, faMobileScreen, faScrewdriverWrench, faTabletScreenButton, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
     // const { data: listCateActive, isLoading } = useGetCategoriesActiveQuery();
     // if (!listCateActive) {
@@ -29,32 +35,19 @@ export default function Home() {
     return (
         <>
             {/* <AppAdvertisements /> */}
-            <Container className='mt-4' style={{ paddingTop: "100px" }}>
+            <Container className='mt-4' style={{ paddingTop: "120px" }}>
                 <div className="row">
                     <div className="col-md-3">
                         {/* <AppCategory categories={listCateActive?.data} /> */}
-                        <MDBListGroupItem
-                            key={1}
-                            tag='button'
-                            action
-                            noBorders
-                            aria-current='true'
-                            type='button'
-                            className='px-3'
-                        >
-                         iphone
-                        </MDBListGroupItem>
-                         <MDBListGroupItem
-                            key={2}
-                            tag='button'
-                            action
-                            noBorders
-                            aria-current='true'
-                            type='button'
-                            className='px-3'
-                        >
-                         iphone 2
-                        </MDBListGroupItem>
+                        <div className="price-list ">
+                            <MDBListGroup light small>
+                                <MDBListGroupItem> <FontAwesomeIcon icon={faMobileScreen} className="text-blue-500 text-3xl font-medium" />  Điện thoại cũ</MDBListGroupItem>
+                                <MDBListGroupItem><FontAwesomeIcon icon={faTabletScreenButton} className="text-blue-500 text-3xl" />  Máy tính bảng</MDBListGroupItem>
+                                <MDBListGroupItem><FontAwesomeIcon icon={faScrewdriverWrench} className="text-blue-500 text-3xl" />  Sửa chữa điện thoại</MDBListGroupItem>
+                                <MDBListGroupItem> <FontAwesomeIcon icon={faHeadphones} className="text-4xl text-blue-700" />  Linh kiện</MDBListGroupItem>
+                                <MDBListGroupItem> <FontAwesomeIcon icon={faLightbulb}  />  Blog thủ thuật</MDBListGroupItem>
+                            </MDBListGroup>
+                        </div>
                     </div>
                     <div className="col-md-9 ">
                         <Carousel>
