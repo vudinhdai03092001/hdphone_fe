@@ -2,6 +2,9 @@
 'use client'
 import AppHeader from "@/components/app.header";
 import AppFooter from "@/components/app.footer"
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 import { Inter } from "next/font/google";
 // font chữ 
 const inter = Inter({

@@ -13,7 +13,8 @@ import {
     MDBRadio,
     MDBIcon,
     MDBRow,
-    MDBBadge
+    MDBBadge,
+    MDBCardText
 } from 'mdb-react-ui-kit';
 import {
     TabletOutlined,
@@ -23,9 +24,10 @@ import { useGetCategoriesActiveQuery } from '@/store/category/category.service';
 import { useEffect, useState } from 'react';
 import AppItemProduct from '@/components/app.product';
 import AppCategory from '@/components/app.category';
-import { faLightbulb, faMobileScreen, faScrewdriverWrench, faTabletScreenButton, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faMobileScreen, faScrewdriverWrench, faTabletScreenButton } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
+
 export default function Home() {
     // const { data: listCateActive, isLoading } = useGetCategoriesActiveQuery();
     // if (!listCateActive) {
@@ -35,21 +37,22 @@ export default function Home() {
     return (
         <>
             {/* <AppAdvertisements /> */}
-            <Container className='mt-4' style={{ paddingTop: "120px" }}>
+            <Container className='hidden md:block mt-4' style={{ paddingTop: "120px" }}>
                 <div className="row">
                     <div className="col-md-3">
                         {/* <AppCategory categories={listCateActive?.data} /> */}
                         <div className="price-list ">
                             <MDBListGroup light small>
-                                <MDBListGroupItem> <FontAwesomeIcon icon={faMobileScreen} className="text-blue-500 text-3xl font-medium" />  Điện thoại cũ</MDBListGroupItem>
+                            
+                                <MDBListGroupItem > <FontAwesomeIcon icon={faMobileScreen} className="text-blue-500 text-3xl font-medium" />  Điện thoại cũ</MDBListGroupItem>
                                 <MDBListGroupItem><FontAwesomeIcon icon={faTabletScreenButton} className="text-blue-500 text-3xl" />  Máy tính bảng</MDBListGroupItem>
                                 <MDBListGroupItem><FontAwesomeIcon icon={faScrewdriverWrench} className="text-blue-500 text-3xl" />  Sửa chữa điện thoại</MDBListGroupItem>
                                 <MDBListGroupItem> <FontAwesomeIcon icon={faHeadphones} className="text-4xl text-blue-700" />  Linh kiện</MDBListGroupItem>
-                                <MDBListGroupItem> <FontAwesomeIcon icon={faLightbulb}  />  Blog thủ thuật</MDBListGroupItem>
+                                <MDBListGroupItem> <FontAwesomeIcon icon={faLightbulb} />  Blog thủ thuật</MDBListGroupItem>
                             </MDBListGroup>
                         </div>
                     </div>
-                    <div className="col-md-9 ">
+                    <div className="col-md-6 ">
                         <Carousel>
                             <Carousel.Item>
                                 <img
@@ -88,12 +91,25 @@ export default function Home() {
                                     </p>
                                 </Carousel.Caption>
                             </Carousel.Item>
-
                         </Carousel>
                     </div>
+                    <div className='col-md-3'>
+                        <div className='d-flex align-items-center'>
+                            <img
+                                src="/img/banner1.jpg"
+                                alt=''
+                                style={{ width: '100%', }}
+                            />
+                        </div><><br /></>
+                        <div className='d-flex align-items-center '>
+                            <img
+                                src="/img/banner1.jpg"
+                                alt=''
+                                style={{ width: '100%', }}
+                            />
+                        </div>
+                    </div>
                 </div>
-
-
                 <MDBRow className='mt-5 '>
                     <MDBCol xl={3} lg={6} className='mb-4'>
                         <MDBCard>
