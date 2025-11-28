@@ -16,7 +16,7 @@ const AppItemProduct = () => {
 
         <MDBCard>
             <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-zoom'>
-                <MDBCardImage className='item-image' src='/img/item1.avif' fluid alt='...' />
+                <MDBCardImage className='item-image' src='/img/product.png' fluid alt='...' />
                 <Link href={'/product/1'}>
                     <div className='mask' style={{ backgroundColor: 'rgba(209, 209, 209, 0.15)' }}></div>
                 </Link>

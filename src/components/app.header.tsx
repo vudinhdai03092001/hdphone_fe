@@ -12,9 +12,11 @@ function AppHeader() {
 
     return (
         <>
+
             {/* Navbar */}
             <Navbar fixed='top' expand="lg" className=" flex-column p-0 bg-body-tertiary color-orange" >
                 {/* Header Box */}
+               
                 <div className="w-100">
                     <img
                         alt=""
@@ -71,6 +73,7 @@ function AppHeader() {
                             <Link href="/products" className='nav-link'>Sản phẩm</Link>
                             <Link href="/news" className='nav-link'>Tin tức</Link>
                             <Link href="/contact" className='nav-link'>Liên hệ</Link>
+                            
                         </Nav>
                     </Container>
                 </div>
