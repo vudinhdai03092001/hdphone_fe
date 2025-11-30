@@ -9,14 +9,10 @@ function AppHeader() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     return (
         <>
-
             {/* Navbar */}
-            <Navbar fixed='top' expand="lg" className=" flex-column p-0 bg-body-tertiary color-orange" >
-                {/* Header Box */}
-               
+            <Navbar fixed='top' expand="lg" className=" flex-column p-0 bg-body-tertiary color-orange d-none d-md-block" >
                 <div className="w-100">
                     <img
                         alt=""
@@ -24,42 +20,46 @@ function AppHeader() {
                         className="d-inline-block align-top img-header-banner"
                     />{' '}
                 </div>
-                <Container className=''>
-                    <Navbar.Brand  >
-                        <Link href={'/'}
-                            style={{ width: "50px", height: "100%" }}
-                        >
-                            <img
-                                alt=""
-                                src="/img/HD_Logo.png"
-                                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                                className="d-inline-block align-top"
-                            />{' '}
-                        </Link>
-                    </Navbar.Brand>
+                <Container className='row mt-2 mb-2'>
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="me-auto my-2 my-lg-0 "
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
-                        >
-                            {/* <Link href="/" className='nav-link color-text'>Trang chủ</Link> */}
-                            <Link href="/products" className='nav-link'>Sản phẩm</Link>
-                            <Link href="/news" className='nav-link'>Tin tức</Link>
-                            <Link href="/contact" className='nav-link'>Liên hệ</Link>
+                        <div className='col-md-1'>
+                            <Link href={'/'}
+                                style={{ width: "50px", }}>
+                                <img
+                                    alt=""
+                                    src="/img/HD_Logo.png"
+                                    style={{ width: "50px", objectFit: "contain" }}
+                                    className="d-inline-block align-top"
+                                />{' '}
+                            </Link>
+                        </div>
+                        <div className='col-md-1'>
+                            <Button variant="primary" onClick={handleShow}>
+                                <i className="fas fa-bars"></i>
+                            </Button>
+                        </div>
+                        <div className='col-md-8'>
                             <Form className="d-flex pl-8" >
                                 <Form.Control
                                     type="search"
                                     placeholder="Bạn cần tìm?"
                                     className="me-2"
-                                    aria-label="Search" style={{ width: "500px" }}
+                                    aria-label="Search" style={{ width: "100%" }}
                                 />
                                 <Button variant="light"><MDBIcon fas icon="search" /></Button>
                             </Form>
-                        </Nav>
-                        <MDBBtn color='light' className='me-4'>
-                            <MDBIcon fas icon="cart-plus" />
-                        </MDBBtn>
+                        </div>
+                        <div className='col-md-1'>
+                            <MDBBtn color='light' className='me-4'>
+                                <MDBIcon fas icon="cart-plus" />
+                            </MDBBtn>
+                        </div>
+                        <div className='col-md-1'>
+                            <MDBBtn color='light' className='me-4'>
+                                <MDBIcon fas icon="cart-plus" />
+                            </MDBBtn>
+                        </div>
+
                     </Navbar.Collapse>
                 </Container>
                 <div className="w-100" style={{ backgroundColor: "white" }}>
@@ -69,17 +69,15 @@ function AppHeader() {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link href="/" className='nav-link '>Trang chủ</Link>
-                            <Link href="/products" className='nav-link'>Sản phẩm</Link>
-                            <Link href="/news" className='nav-link'>Tin tức</Link>
-                            <Link href="/contact" className='nav-link'>Liên hệ</Link>
-                            
+                            <ul>
+                                <li>ds</li>
+                            </ul>
                         </Nav>
                     </Container>
                 </div>
             </Navbar>
             {/* Mobile Navbar */}
-            <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
+            <Navbar fixed='top' className="flex-column p-0 d-lg-none color-orange" style={{ marginBottom: "250px !important"  }}>
                 <div className="">
                     <img
                         alt=""
@@ -87,24 +85,35 @@ function AppHeader() {
                         className="d-inline-block align-top img-header-banner"
                     />{' '}
                 </div>
-                <Container>
-                    <Navbar.Brand  >
+                <Container className='row'>
+                    <div className='col-2'>
                         <Link href={'/'} className='navbar-brand'>
                             <img
                                 alt=""
-                                width="60"
-                                height="60"
+                                style={{ width: "50px", objectFit: "contain" }}
                                 src="/img/HD_Logo.png"
                                 className="d-inline-block align-top "
                             />{' '}
                         </Link>
-                    </Navbar.Brand>
-                    <Button variant="primary" onClick={handleShow}>
-                        <i className="fas fa-bars"></i>
-                    </Button>
+                    </div>
+                    <div className='col-8'>
+                        <Form className="d-flex pl-8" >
+                            <Form.Control
+                                type="search"
+                                placeholder="Bạn cần tìm?"
+                                className="me-2"
+                                aria-label="Search" style={{ width: "100%" }}
+                            />
+                            <Button variant="light" style={{padding:"10px"}}><MDBIcon fas icon="search" /></Button>
+                        </Form>
+                    </div>
+                    <div className='col-2'>
+                        <Button variant="light" onClick={handleShow} className='float-end'>
+                            <i className="fas fa-bars"></i>
+                        </Button>
+                    </div>
                 </Container>
             </Navbar>
-
             {/* Offcanvas Sidenav */}
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
@@ -135,15 +144,7 @@ function AppHeader() {
                                 8
                             </MDBBadge>
                         </MDBBtn>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-primary">Search</Button>
-                        </Form>
+
                     </Nav>
                 </Offcanvas.Body>
             </Offcanvas>
