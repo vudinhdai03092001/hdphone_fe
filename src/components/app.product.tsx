@@ -7,7 +7,6 @@ import {
     MDBCardImage,
     MDBBtn,
     MDBRipple,
-
     MDBIcon
 } from 'mdb-react-ui-kit';
 import Link from 'next/link'

@@ -22,13 +22,10 @@ const AppAdvertisements = () => {
                                 </MDBBtn>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }
 export default AppAdvertisements

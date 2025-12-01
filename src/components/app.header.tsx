@@ -69,17 +69,17 @@ function AppHeader() {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link href="/" className='nav-link '>Trang chủ</Link>
+                            {/* <Link href="/" className='nav-link '>Trang chủ</Link>
                             <Link href="/products" className='nav-link'>Sản phẩm</Link>
                             <Link href="/news" className='nav-link'>Tin tức</Link>
-                            <Link href="/contact" className='nav-link'>Liên hệ</Link>
+                            <Link href="/contact" className='nav-link'>Liên hệ</Link> */}
                             
                         </Nav>
                     </Container>
                 </div>
             </Navbar>
             {/* Mobile Navbar */}
-            <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
+            {/* <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
                 <div className="">
                     <img
                         alt=""
@@ -103,7 +103,7 @@ function AppHeader() {
                         <i className="fas fa-bars"></i>
                     </Button>
                 </Container>
-            </Navbar>
+            </Navbar> */}
 
             {/* Offcanvas Sidenav */}
             <Offcanvas show={show} onHide={handleClose}>
