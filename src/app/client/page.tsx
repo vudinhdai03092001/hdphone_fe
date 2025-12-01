@@ -126,7 +126,7 @@ export default function Home() {
                     </div>
                     <MDBRow className='mt-2 '>
                         <Swiper
-                         key="swiper-1"
+                            key="swiper-1"
                             className="swiper-1"
                             spaceBetween={20}
                             navigation={false}
@@ -169,7 +169,7 @@ export default function Home() {
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <AppItemProduct />
+
                             </SwiperSlide>
                             <SwiperSlide >
                                 <MDBCol className='mb-2'>
@@ -191,7 +191,6 @@ export default function Home() {
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <AppItemProduct />
                             </SwiperSlide>
                             <SwiperSlide >
                                 <MDBCol className='mb-2'>
@@ -213,7 +212,6 @@ export default function Home() {
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <AppItemProduct />
                             </SwiperSlide>
                             <SwiperSlide >
                                 <MDBCol className='mb-2'>
@@ -235,7 +233,6 @@ export default function Home() {
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <AppItemProduct />
                             </SwiperSlide>
                             <SwiperSlide >
                                 <MDBCol className='mb-2'>
@@ -257,11 +254,8 @@ export default function Home() {
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <AppItemProduct />
                             </SwiperSlide>
                         </Swiper>
-
-
                     </MDBRow>
                 </Container >
             </div>
@@ -300,8 +294,7 @@ export default function Home() {
                     <div className="col-lg-9 col-md-12">
                         <div style={{ width: "100%" }}>
                             <Swiper
-                                key="swiper-2"
-                               className="swiper-2"
+
                                 spaceBetween={20}
                                 navigation={false}
                                 modules={[Navigation]}
