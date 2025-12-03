@@ -31,12 +31,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation"
 import { Navigation } from "swiper/modules";
+import Link from 'next/link';
+
 export default function Home() {
     // const { data: listCateActive, isLoading } = useGetCategoriesActiveQuery();
     // if (!listCateActive) {
     //     return <div>Lỗi truy vấn...</div>
     // }
     // if (isLoading) return <p>Loading...</p>;
+
+
+    const categories = [
+        { label: "Điện Thoại Cũ", icon: <i className="fas fa-mobile-alt"></i> },
+        { label: "Sửa Điện Thoại", icon: <i className="fas fa-mobile-alt"></i> },
+        { label: "Sửa Máy Tính Bảng", icon: <i className="fas fa-tablet-alt"></i> },
+        { label: "Phụ Kiện", icon: <i className="fas fa-plug"></i> },
+        { label: "Blog Thủ Thuật", icon: <i className="far fa-lightbulb"></i> }
+    ];
+    const commitments = [
+        { label: "Linh kiện tốt ", image: "/img/linhkien.svg" },
+        { label: "Giá thật rẻ - Sửa thật nhanh", image: "/img/suanhanh.svg" },
+        { label: "Tư vấn rõ ràng ", image: "/img/tuvan.svg" },
+        { label: "Bảo hành dài - Hỗ trợ tận tâm", image: "/img/baohanh.svg" },
+      
+    ]
     return (
         <>
             {/* <AppAdvertisements /> */}
@@ -44,15 +62,16 @@ export default function Home() {
                 <Container className=' mt-4' style={{ paddingTop: "120px" }}>
                     <div className="row">
                         <div className="col-lg-3 gx-0 ps-1 pe-1">
-                            {/* <AppCategory categories={listCateActive?.data} /> */}
-                            <div className="price-list  d-none d-lg-block">
-                                <MDBListGroup light small>
-                                    <MDBListGroupItem > <FontAwesomeIcon icon={faMobileScreen} className="text-blue-500 text-3xl font-medium" />  Điện thoại cũ</MDBListGroupItem>
-                                    <MDBListGroupItem><FontAwesomeIcon icon={faTabletScreenButton} className="text-blue-500 text-3xl" />  Máy tính bảng</MDBListGroupItem>
-                                    <MDBListGroupItem><FontAwesomeIcon icon={faScrewdriverWrench} className="text-blue-500 text-3xl" />  Sửa chữa điện thoại</MDBListGroupItem>
-                                    <MDBListGroupItem> <FontAwesomeIcon icon={faHeadphones} className="text-4xl text-blue-700" />  Linh kiện</MDBListGroupItem>
-                                    <MDBListGroupItem> <FontAwesomeIcon icon={faLightbulb} />  Blog thủ thuật</MDBListGroupItem>
-                                </MDBListGroup>
+                            <div className="price-list d-none d-lg-block d-flex flex-column gap-2">
+                                {categories.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className={"category-item"}
+                                    >
+                                        <span style={{ fontSize: "20px" }}>{item.icon}</span>
+                                        <span>{item.label}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12 mb-2 gx-0 ps-1 pe-1">
@@ -149,112 +168,30 @@ export default function Home() {
                             }}
                         >
                             {/* Mỗi slide phải đặt width 100% */}
-                            <SwiperSlide >
-                                <MDBCol className='mb-2'>
-                                    <MDBCard>
-                                        <MDBCardBody className='p-2'>
-                                            <div className='d-flex align-items-center'>
-                                                <div className="" style={{ flex: 1 }}>
-                                                    <img
-                                                        src='/img/phone.webp'
-                                                        alt=''
-                                                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                                                        className='rounded-circle'
-                                                    />
+                            {commitments.map((item, index) => (
+                                <SwiperSlide key={index} >
+                                    <MDBCol className='mb-2'>
+                                        <MDBCard className='commitment'>
+                                            <MDBCardBody className='p-2'>
+                                                <div className='d-flex align-items-center'>
+                                                    <div className="" style={{ flex: 1 }}>
+                                                        <img
+                                                            src={`${item.image}`}
+                                                            alt=''
+                                                            style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                                                            className='rounded-circle'
+                                                        />
+                                                    </div>
+                                                    <div className="ms-2" style={{ flex: 10 }}>
+                                                        <p className='text-muted mb-0'>{item.label}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="ms-2" style={{ flex: 4 }}>
-                                                    <p className='text-muted mb-0'>Chăm sóc khách hàng</p>
-                                                </div>
-                                            </div>
-                                        </MDBCardBody>
-                                    </MDBCard>
-                                </MDBCol>
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                    </MDBCol>
+                                </SwiperSlide>
+                            ))}
 
-                            </SwiperSlide>
-                            <SwiperSlide >
-                                <MDBCol className='mb-2'>
-                                    <MDBCard>
-                                        <MDBCardBody className='p-2'>
-                                            <div className='d-flex align-items-center'>
-                                                <div className="" style={{ flex: 1 }}>
-                                                    <img
-                                                        src='/img/phone.webp'
-                                                        alt=''
-                                                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                                                        className='rounded-circle'
-                                                    />
-                                                </div>
-                                                <div className="ms-2" style={{ flex: 4 }}>
-                                                    <p className='text-muted mb-0'>Chăm sóc khách hàng</p>
-                                                </div>
-                                            </div>
-                                        </MDBCardBody>
-                                    </MDBCard>
-                                </MDBCol>
-                            </SwiperSlide>
-                            <SwiperSlide >
-                                <MDBCol className='mb-2'>
-                                    <MDBCard>
-                                        <MDBCardBody className='p-2'>
-                                            <div className='d-flex align-items-center'>
-                                                <div className="" style={{ flex: 1 }}>
-                                                    <img
-                                                        src='/img/phone.webp'
-                                                        alt=''
-                                                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                                                        className='rounded-circle'
-                                                    />
-                                                </div>
-                                                <div className="ms-2" style={{ flex: 4 }}>
-                                                    <p className='text-muted mb-0'>Chăm sóc khách hàng</p>
-                                                </div>
-                                            </div>
-                                        </MDBCardBody>
-                                    </MDBCard>
-                                </MDBCol>
-                            </SwiperSlide>
-                            <SwiperSlide >
-                                <MDBCol className='mb-2'>
-                                    <MDBCard>
-                                        <MDBCardBody className='p-2'>
-                                            <div className='d-flex align-items-center'>
-                                                <div className="" style={{ flex: 1 }}>
-                                                    <img
-                                                        src='/img/phone.webp'
-                                                        alt=''
-                                                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                                                        className='rounded-circle'
-                                                    />
-                                                </div>
-                                                <div className="ms-2" style={{ flex: 4 }}>
-                                                    <p className='text-muted mb-0'>Chăm sóc khách hàng</p>
-                                                </div>
-                                            </div>
-                                        </MDBCardBody>
-                                    </MDBCard>
-                                </MDBCol>
-                            </SwiperSlide>
-                            <SwiperSlide >
-                                <MDBCol className='mb-2'>
-                                    <MDBCard>
-                                        <MDBCardBody className='p-2'>
-                                            <div className='d-flex align-items-center'>
-                                                <div className="" style={{ flex: 1 }}>
-                                                    <img
-                                                        src='/img/phone.webp'
-                                                        alt=''
-                                                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
-                                                        className='rounded-circle'
-                                                    />
-                                                </div>
-                                                <div className="ms-2" style={{ flex: 4 }}>
-                                                    <p className='text-muted mb-0'>Chăm sóc khách hàng</p>
-                                                </div>
-                                            </div>
-                                        </MDBCardBody>
-                                    </MDBCard>
-                                </MDBCol>
-                            </SwiperSlide>
                         </Swiper>
                     </MDBRow>
                 </Container >

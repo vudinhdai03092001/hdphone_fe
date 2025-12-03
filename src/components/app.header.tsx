@@ -20,44 +20,47 @@ function AppHeader() {
                         className="d-inline-block align-top img-header-banner"
                     />{' '}
                 </div>
-                <Container className='row mt-2 mb-2'>
+                <Container className=' mt-2 mb-2'>
+
                     <Navbar.Collapse id="navbarScroll">
-                        <div className='col-md-1'>
-                            <Link href={'/'}
-                                style={{ width: "50px", }}>
-                                <img
-                                    alt=""
-                                    src="/img/HD_Logo.png"
-                                    style={{ width: "50px", objectFit: "contain" }}
-                                    className="d-inline-block align-top"
-                                />{' '}
-                            </Link>
-                        </div>
-                        <div className='col-md-1'>
-                            <Button variant="primary" onClick={handleShow}>
-                                <i className="fas fa-bars"></i>
-                            </Button>
-                        </div>
-                        <div className='col-md-8'>
-                            <Form className="d-flex pl-8" >
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Bạn cần tìm?"
-                                    className="me-2"
-                                    aria-label="Search" style={{ width: "100%" }}
-                                />
-                                <Button variant="light"><MDBIcon fas icon="search" /></Button>
-                            </Form>
-                        </div>
-                        <div className='col-md-1'>
-                            <MDBBtn color='light' className='me-4'>
-                                <MDBIcon fas icon="cart-plus" />
-                            </MDBBtn>
-                        </div>
-                        <div className='col-md-1'>
-                            <MDBBtn color='light' className='me-4'>
-                                <MDBIcon fas icon="cart-plus" />
-                            </MDBBtn>
+                        <div className="row">
+                            <div className='col-md-1'>
+                                <Link href={'/'}
+                                    style={{ width: "50px", }}>
+                                    <img
+                                        alt=""
+                                        src="/img/HD_Logo.png"
+                                        style={{ width: "50px", objectFit: "contain" }}
+                                        className="d-inline-block align-top"
+                                    />{' '}
+                                </Link>
+                            </div>
+                            <div className='col-md-1'>
+                                <Button variant="light" onClick={handleShow}>
+                                    <i className="fas fa-bars"></i>
+                                </Button>
+                            </div>
+                            <div className='col-md-8'>
+                                <Form className="d-flex pl-8" >
+                                    <Form.Control
+                                        type="search"
+                                        placeholder="Bạn cần tìm?"
+                                        className="me-2"
+                                        aria-label="Search" style={{ width: "100%" }}
+                                    />
+                                    <Button variant="light"><MDBIcon fas icon="search" /></Button>
+                                </Form>
+                            </div>
+                            <div className='col-md-1'>
+                                <MDBBtn color='light' className='me-4'>
+                                    <MDBIcon fas icon="cart-plus" />
+                                </MDBBtn>
+                            </div>
+                            <div className='col-md-1'>
+                                <MDBBtn color='light' className='me-4'>
+                                    <MDBIcon fas icon="cart-plus" />
+                                </MDBBtn>
+                            </div>
                         </div>
 
                     </Navbar.Collapse>
@@ -73,13 +76,13 @@ function AppHeader() {
                             <Link href="/products" className='nav-link'>Sản phẩm</Link>
                             <Link href="/news" className='nav-link'>Tin tức</Link>
                             <Link href="/contact" className='nav-link'>Liên hệ</Link> */}
-                            
+
                         </Nav>
                     </Container>
                 </div>
             </Navbar>
             {/* Mobile Navbar */}
-            <Navbar fixed='top' bg="light" className="flex-column p-0  d-lg-none">
+            <Navbar fixed='top' className="flex-column p-0  d-lg-none color-orange">
                 <div className="">
                     <img
                         alt=""
@@ -106,7 +109,7 @@ function AppHeader() {
                                 className="me-2"
                                 aria-label="Search" style={{ width: "100%" }}
                             />
-                            <Button variant="light" style={{padding:"10px"}}><MDBIcon fas icon="search" /></Button>
+                            <Button variant="light" style={{ padding: "10px" }}><MDBIcon fas icon="search" /></Button>
                         </Form>
                     </div>
                     <div className='col-2'>

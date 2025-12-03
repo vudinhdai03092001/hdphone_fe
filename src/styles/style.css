@@ -256,3 +256,26 @@ body {
     height: 50px;
     object-fit: cover;
 }
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.category-item:hover {
+    background: #fff7f2;
+    /* cam nhạt */
+    border-color: #ff6a00;
+    color: #ff6a00;
+}
+
+.commitment {
+    background: #fff7f2;
+    border-color: #ff6a00 !important
+}
